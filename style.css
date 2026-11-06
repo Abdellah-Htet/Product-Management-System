@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background: #222;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.crud{
+    width: 80%;
+    margin: auto;
+}
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    
+}
+input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: #111;
+    border-radius: 4px;
+    margin: 4px 0px;
+    padding: 4px;
+    color:white ;
+
+}
+input:focus{
+    background: #000;
+    transform: scale(1.1);
+}
+.price input{
+    width: 20%;
+}
+#total{
+    background: #a00d02;
+    border-radius: 4px;
+    padding: 5px 2px;
+}
+#taotal::before{
+    content: 'total';
+}
+button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: #5f0586;
+    color: #fff;
+    border-radius: 20px;
+    transform: 0.5s;
+}
+button:hover{
+    background:#ae00f9df ;
+    letter-spacing: 1px;
+
+}
+.btnSearch{
+    display: flex;
+    justify-content: space-between;
+}
+.btnSearch button{
+    width: 45%;
+}
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+
+}
+table th{
+    text-transform: uppercase;
+
+}
+th,td{
+    padding: 5px;
+}
+#deleteAll{
+    margin: 20px 0;
+
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .crud {
+        width: 90%;
+    }
+
+    .price {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .price input {
+        width: calc(50% - 10px);
+        flex: 1 1 40%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .crud {
+        width: 95%;
+    }
+
+    .head {
+        margin: 20px 0;
+    }
+
+    .head h1 {
+        font-size: 28px;
+    }
+
+    .head p {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    input {
+        box-sizing: border-box;
+        height: 38px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    input:focus {
+        transform: none;
+    }
+
+    .price {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    .price input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #total {
+        display: inline-block;
+        width: fit-content;
+        margin-top: 5px;
+    }
+
+    button {
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .btnSearch {
+        gap: 10px;
+    }
+
+    .btnSearch button {
+        width: 50%;
+        font-size: 11px;
+    }
+
+    /* Table responsive */
+    .searchBlock {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-collapse: collapse;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    th, td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    #deleteAll {
+        margin: 15px 0;
+    }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+
+    .crud {
+        width: 96%;
+    }
+
+    .head h1 {
+        font-size: 24px;
+    }
+
+    .btnSearch button {
+        font-size: 10px;
+    }
+}
